@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>LAMP STACK</title>
+        <title>MAMP STACK</title>
         <link rel="stylesheet" href="/assets/css/bulma.min.css">
     </head>
     <body>
@@ -11,7 +11,7 @@
             <div class="hero-body">
                 <div class="container has-text-centered">
                     <h1 class="title">
-                        LAMP STACK
+                        MAMP STACK
                     </h1>
                     <h2 class="subtitle">
                         Your local development environment
@@ -31,7 +31,7 @@
                                 <li>PHP <?= phpversion(); ?></li>
                                 <li>
                                     <?php
-                                    $link = mysqli_connect("mysql", "root", "tiger", null);
+                                    $link = mysqli_connect("mamp_mysql", "root", "secret", null);
 
 /* check connection */
                                     if (mysqli_connect_errno()) {
