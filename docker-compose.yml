@@ -2,8 +2,7 @@ version: "3"
 
 services:
   mamp_webserver:
-    build: 
-      context: ./bin/webserver
+    build: ./bin/webserver
     container_name: 'mamp_webserver'
     restart: 'always'
     ports:
@@ -17,7 +16,7 @@ services:
       - ${VHOSTS_DIR-./config/vhosts}:/etc/apache2/sites-enabled
       - ${LOG_DIR-./logs/apache2}:/var/log/apache2
   mamp_mysql:
-    build: ./bin/mysql
+    build: ./bin/mysql8
     container_name: 'mamp_mysql'
     restart: 'always'
     ports:
