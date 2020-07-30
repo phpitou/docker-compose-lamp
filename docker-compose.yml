@@ -8,6 +8,7 @@ services:
     ports:
       - "80:80"
       - "443:443"
+      - "1337:1337"
     links: 
       - mamp_mysql
     volumes: 
@@ -15,6 +16,7 @@ services:
       - ${PHP_INI-./config/php/php.ini}:/usr/local/etc/php/php.ini
       - ${VHOSTS_DIR-./config/vhosts}:/etc/apache2/sites-enabled
       - ${LOG_DIR-./logs/apache2}:/var/log/apache2
+      - ./data/crontab:/var/spool/cron/crontabs/root
   mamp_mysql:
     build: ./bin/mysql8
     container_name: 'mamp_mysql'
